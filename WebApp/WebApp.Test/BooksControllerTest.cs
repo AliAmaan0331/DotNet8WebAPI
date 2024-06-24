@@ -104,6 +104,34 @@ namespace WebApp.Test
             Assert.IsFalse(result.Success);
         }
 
+        [TestCase(1)]
+        public void Delete(int id)
+        {
+            //Arrange
+            Book bookTest = BuildBodyRequest(1, "Pirates", "Literature", "John", DateTime.Now, "Admin", "", DateTime.Now);
+            Result resultTest = booksController.Post(bookTest).Result;
+
+            //Act
+            result = booksController.Delete(id).Result;
+
+            //Assert
+            Assert.That(result.Message, Is.EqualTo("Success"));
+        }
+
+        [TestCase(2)]
+        public void Should_ReturnFalse_When_TheRecordToDeleteDoesNotExist(int id)
+        {
+            //Arrange
+            Book bookTest = BuildBodyRequest(1, "Pirates", "Literature", "John", DateTime.Now, "Admin", "", DateTime.Now);
+            Result resultTest = booksController.Post(bookTest).Result;
+
+            //Act
+            result = booksController.Delete(id).Result;
+
+            //Assert
+            Assert.IsFalse(result.Success);
+        }
+
         public static Book BuildBodyRequest(int id, string name, string subject, string author, DateTime createdOn, string createdBy, string lastModifiedBy, DateTime lastModifiedOn) 
         {
             return new Book

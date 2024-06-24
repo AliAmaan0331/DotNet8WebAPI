@@ -13,6 +13,8 @@ namespace WebApp.Models
         public string? CreatedBy { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public string? LastModifiedBy { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 
     public class Result

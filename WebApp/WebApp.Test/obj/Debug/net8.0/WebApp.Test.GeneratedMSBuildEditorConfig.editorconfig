@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApp.Test
-build_property.ProjectDir = C:\Users\hp\source\repos\WebApp\WebApp.Test\
+build_property.ProjectDir = C:\Users\hp\source\repos\DotNet8WebAPI\WebApp\WebApp.Test\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

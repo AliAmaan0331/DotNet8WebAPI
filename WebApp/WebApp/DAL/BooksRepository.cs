@@ -41,11 +41,21 @@ namespace WebApp.DAL
 
         public Result RemoveBooks(int id)
         {
-            int isRemoved = _context.Books.Where(bk => bk.Id == id).ExecuteDelete();
-            _context.SaveChanges();
-            result.Success = isRemoved > 0 ? true : false;
-            result.Data = null;
-            result.Message = isRemoved > 0 ? "Success" : "Failed";
+            Book book = _context.Books.First(bk => bk.Id == id);
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                _context.SaveChanges();
+                result.Success = true;
+                result.Data = null;
+                result.Message = "Success";
+            }
+            else
+            {
+                result.Data = null;
+                result.Success = false;
+                result.Message = "Record to be deleted does not exist";
+            }
             return result;
         }
 

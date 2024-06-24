@@ -2295,11 +2295,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp.Test\\WebApp.Test.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp.Test\\WebApp.Test.csproj",
       "projectName": "WebApp.Test",
-      "projectPath": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp.Test\\WebApp.Test.csproj",
+      "projectPath": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp.Test\\WebApp.Test.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp.Test\\obj\\",
+      "outputPath": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2317,8 +2317,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp\\WebApp.csproj": {
-              "projectPath": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp\\WebApp.csproj"
+            "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp\\WebApp.csproj": {
+              "projectPath": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp\\WebApp.csproj"
             }
           }
         }

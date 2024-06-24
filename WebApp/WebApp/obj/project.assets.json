@@ -2723,11 +2723,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp\\WebApp.csproj",
+      "projectPath": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\source\\repos\\WebApp\\WebApp\\obj\\",
+      "outputPath": "C:\\Users\\hp\\source\\repos\\DotNet8WebAPI\\WebApp\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
