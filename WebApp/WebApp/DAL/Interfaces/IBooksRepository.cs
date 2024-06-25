@@ -8,5 +8,6 @@ namespace WebApp.DAL.Interfaces
         public Result AddBooks(Book book);
         public Result RemoveBooks(int id);
         public Result UpdateBooks(Book book);
+        public Result GetBooksByUserId(int userId);
     }
 }

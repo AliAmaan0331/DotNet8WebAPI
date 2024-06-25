@@ -17,6 +17,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 );
 
 builder.Services.AddTransient<IBooksRepository, BooksRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

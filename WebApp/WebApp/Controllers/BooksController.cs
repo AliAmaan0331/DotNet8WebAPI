@@ -16,7 +16,8 @@ namespace WebApp.Controllers
             _booksRepository = booksRepository;
         }
 
-        [HttpGet(Name = "GetBooks")]
+        [HttpGet]
+        [Route("Get")]
         public async Task<Result> Get()
         {
             try
@@ -33,8 +34,9 @@ namespace WebApp.Controllers
             }
         }
 
-        [HttpPost(Name = "CreateBook")]
-        public async Task<Result> Post(Book book)
+        [HttpPost]
+        [Route("Add")]
+        public async Task<Result> Post([FromBody] Book book)
         {
             try
             {
@@ -50,8 +52,9 @@ namespace WebApp.Controllers
             }
         }
 
-        [HttpDelete(Name = "DeleteBook")]
-        public async Task<Result> Delete(int id)
+        [HttpDelete]
+        [Route("Delete")]
+        public async Task<Result> Delete([FromBody] int id)
         {
             try
             {
@@ -67,8 +70,9 @@ namespace WebApp.Controllers
             }
         }
 
-        [HttpPut(Name = "UpdateBook")]
-        public async Task<Result> Put(Book book)
+        [HttpPut]
+        [Route("Update")]
+        public async Task<Result> Put([FromBody] Book book)
         {
             try
             {
@@ -76,6 +80,24 @@ namespace WebApp.Controllers
                 return result;
             }
             catch (Exception ex)
+            {
+                result.Data = null;
+                result.Success = false;
+                result.Message = ex.Message;
+                return result;
+            }
+        }
+
+        [HttpGet]
+        [Route("GetByUserId")]
+        public async Task<Result> GetBooksByUserId(int userId)
+        {
+            try
+            {
+                result = _booksRepository.GetBooksByUserId(userId);
+                return result;
+            }
+            catch (Exception ex) 
             {
                 result.Data = null;
                 result.Success = false;

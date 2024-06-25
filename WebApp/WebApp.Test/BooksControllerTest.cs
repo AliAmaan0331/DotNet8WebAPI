@@ -132,7 +132,21 @@ namespace WebApp.Test
             Assert.IsFalse(result.Success);
         }
 
-        public static Book BuildBodyRequest(int id, string name, string subject, string author, DateTime createdOn, string createdBy, string lastModifiedBy, DateTime lastModifiedOn) 
+        [TestCase(1)]
+        public void Should_ReturnTrue_When_BooksFoundAgainstUserId(int userId)
+        {
+            //Arrange
+            Book bookTest = BuildBodyRequest(1, "Pirates", "Literature", "John", DateTime.Now, "Admin", "", DateTime.Now, 1);
+            Result resultTest = booksController.Post(bookTest).Result;
+
+            //Act
+            result = booksController.GetBooksByUserId(userId).Result;
+
+            //Assert
+            Assert.IsTrue(result.Success);
+        }
+
+        public static Book BuildBodyRequest(int id, string name, string subject, string author, DateTime createdOn, string createdBy, string lastModifiedBy, DateTime lastModifiedOn, int userId=1) 
         {
             return new Book
             {
@@ -143,7 +157,8 @@ namespace WebApp.Test
                 CreatedOn = createdOn,
                 CreatedBy = createdBy,
                 LastModifiedBy = lastModifiedBy,
-                LastModifiedOn = lastModifiedOn
+                LastModifiedOn = lastModifiedOn,
+                UserId = userId
             };
         }
 
